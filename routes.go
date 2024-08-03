@@ -7,6 +7,5 @@ import (
 )
 
 func Routes(e *echo.Echo) {
-	e.GET("/", handlers.Get)
-	e.POST("/", handlers.Post)
+	e.Any("/", handlers.HandleRequest)
 }
