@@ -7,11 +7,6 @@ type Response struct {
 }
 
 type Data struct {
-	Request  RequestData `json:"request"`
-	Response any         `json:"response"`
-}
-
-type RequestData struct {
 	Method      string            `json:"method"`
 	Path        string            `json:"path"`
 	Headers     map[string]string `json:"headers"`

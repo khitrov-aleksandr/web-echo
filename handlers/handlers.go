@@ -34,17 +34,15 @@ func HandleRequest(c echo.Context) error {
 	r := &Response{
 		Success: true,
 		Data: Data{
-			Request: RequestData{
-				Method:      c.Request().Method,
-				Path:        c.Path(),
-				Headers:     headers,
-				Cookies:     cookies,
-				Payload:     json,
-				QueryString: c.QueryString(),
-				QueryParams: params,
-				Host:        c.Request().Host,
-				Ip:          c.RealIP(),
-			},
+			Method:      c.Request().Method,
+			Path:        c.Path(),
+			Headers:     headers,
+			Cookies:     cookies,
+			Payload:     json,
+			QueryString: c.QueryString(),
+			QueryParams: params,
+			Host:        c.Request().Host,
+			Ip:          c.RealIP(),
 		},
 		Metadata: Metadata{
 			Timestamp: helpers.GetTimestamp(),
